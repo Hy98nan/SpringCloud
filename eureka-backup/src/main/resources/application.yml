@@ -1,0 +1,19 @@
+eureka:
+  client:
+#是否向服务中心注册自己
+    register-with-eureka: false
+#是否从服务中心查询
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7777/eureka/
+  instance:
+    hostname: eureka-7788.com
+
+server:
+  port: 7788
+
+
+
+spring:
+  application:
+    name: eureka-server-backup

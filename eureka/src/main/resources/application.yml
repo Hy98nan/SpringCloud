@@ -1,0 +1,17 @@
+eureka:
+  instance:
+    hostname: eureka-7777.com
+  client:
+#是否向注册中心注册自己
+    register-with-eureka: false
+#是否从注册中心查询
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7788/eureka/
+
+spring:
+  application:
+    name: eureka-service
+
+server:
+  port: 7777

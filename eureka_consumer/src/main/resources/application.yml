@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka/,http://localhost:7788/eureka/
+
+spring:
+  application:
+    name: feirn-consumer
+
+server:
+  port: 7779
+
+
+#降级处理
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000

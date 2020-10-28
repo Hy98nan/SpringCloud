@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka/,http://localhost:7788/eureka/
+  instance:
+#将IP注册到服务中心，默认为服务名称
+    prefer-ip-address: true
+server:
+  port: 7799
+
+spring:
+  application:
+    name: zuul-gateway
+
+zuul:
+  routes:
+    feirn-consumer: /provider/**
+#配置路由
